@@ -15,27 +15,27 @@ public class ProductController {
         this.productService = productService;
     }
 
-    @GetMapping("/products")
+    @GetMapping("/cart")
     public List<Product> getAllProducts() {
         return productService.getAllProducts();
     }
 
-    @GetMapping("/products/{id}")
+    @GetMapping("/cart/{id}")
     public Product getSingleProduct(@PathVariable("id") Long id) {
         return productService.getSingleProduct(id);
     }
 
-    @PostMapping("/products")
+    @PostMapping("/cart")
     public Product addProduct(@RequestBody Product product) {
         return productService.addProduct(product);
     }
 
-    @PutMapping("/products/{id}")
+    @PutMapping("/cart/{id}")
     public Product updateProduct(@PathVariable("id") Long id) {
         return productService.updateProduct(id);
     }
 
-    @DeleteMapping("/products/{id}")
+    @DeleteMapping("/cart/{id}")
     public Product deleteProduct(@PathVariable("id") Long id) {
         return productService.deleteProduct(id);
     }

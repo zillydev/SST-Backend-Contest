@@ -17,12 +17,12 @@ public class CategoryController {
         this.productService = productService;
     }
 
-    @GetMapping("/products/categories")
+    @GetMapping("/cart/categories")
     public List<Category> getAllCategories() {
         return productService.getAllCategories();
     }
 
-    @GetMapping("/products/category/{name}")
+    @GetMapping("/cart/category/{name}")
     public List<Product> getProductsInCategory(@PathVariable("name") String categoryId) {
         return productService.getProductsInCategory(categoryId);
     }
